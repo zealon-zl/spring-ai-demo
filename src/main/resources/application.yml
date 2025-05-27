@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: spring-ai-demo
+  ai:
+    openai:
+      api-key: xxxx
+      base-url: https://api.xty.app
+      chat:
+        options:
+          model: gpt-4o-mini
+      embedding:
+        options:
+          model: text-embedding-ada-002
+    mcp:
+      client:
+        stdio:
+          servers-configuration: classpath:/mcp-servers-config.json
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        ai: DEBUG
+    io:
+      modelcontextprotocol:
+        client: DEBUG
+        spec: DEBUG
